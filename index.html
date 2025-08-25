@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-black flex flex-col items-center justify-center">
+  <header class=" h-[180px] flex items-center justify-center space-x-5">
+    <i class="fa-solid fa-address-book text-white text-4xl"></i>
+    <h1 class="text-white text-4xl font-semibold">Contact Manager</h1>
+  </header>
+
+  <div
+    class="main bg-[#1f2d525b] w-[90%] h-[500px] rounded-lg border-[2px] border-[#acacac83] flex items-center justify-center">
+    <div
+      class="left bg-[#ffffff0d] h-full w-[40%] border-r-2 border-[#acacac83] p-6 pt-8 flex flex-col items-center  space-y-9">
+      <h1 class="text-white text-center text-2xl font-semibold mt-9"><i class="fa-solid fa-user-plus mr-4"></i>Add New
+        Contact</h1>
+      <div class="details w-[100%] h-[100%] bg-[#] rounded-lg flex flex-col items-center space-y-7">
+        <input type="text" name="" id="nameInput"
+          class="h-[18%] w-[85%] mt-4 text-[#d8d8d8] rounded-md px-7 bg-[#154c736e]" placeholder="Enter Name">
+        <input type="number" name="" id="numInput"
+          class="h-[18%] w-[85%] mt-10 text-[#d8d8d8] rounded-md px-7 bg-[#154c736e]" placeholder="Enter Phone Number">
+        <button type="button" onclick="addContact()"
+          class="bg-[#1d425d] text-[#d8d8d8] h-[50px] w-48 rounded-[6px] border-[2px] border-[#acacac4d]">Save
+          Contact</button>
+      </div>
+    </div>
+
+    <div class="right w-[60%] h-full flex flex-col items-center py-7 space-y-3">
+      
+      <h1 id="yourContacts" class="text-white hidden text-3xl font-medium mb-5 text-center">Your Contacts</h1>
+
+      <div id="no-contact" class="text-center">
+        <i class="fas fa-address-card text-6xl text-gray-600 mb-4 mt-6"></i>
+        <h1 class="text-3xl text-[#c4c4c4]">No Contacts yet!</h1>
+        <p class="text-2xl text-gray-600 mt-4">Add your first contact to get started.</p>
+      </div>
+      
+      <ul id="contactList" class=" w-[100%] h-[90%] flex flex-col items-center space-y-4 overflow-y-auto"></ul>
+    
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
