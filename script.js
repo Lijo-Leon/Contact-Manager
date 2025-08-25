@@ -21,7 +21,7 @@ function addContact() {
         let li = document.createElement("li")
         li.innerHTML =
             `
-             <div class="w-[730px] h-[60px] rounded-xl border-[2px] border-[#555555a0] relative flex items-center text-white">
+             <div class="w-[730px] h-[60px] rounded-xl border-[2px] border-[#555555a0] relative flex items-center text-white scale-50 lg:scale-100">
                  <i class="fa-solid fa-user ml-3 mr-7 h-11 w-11 rounded-full bg-[#515151a8] flex items-center justify-center "></i>
                  <span class="contact-name w-48">${names}</span>
                  <div class="line w-[1px] h-11 mx-10 bg-[#9494949d]"></div>
